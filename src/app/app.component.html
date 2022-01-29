@@ -1,0 +1,133 @@
+<div>
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
+      <a class="navbar-brand brand" routerLink="home"><h2><b>SoldX</b> <i class="fas fa-handshake"></i> </h2></a>
+      
+      <ul class="navbar-nav">
+        <li class="nav-item ">
+           
+          <div >
+            <a routerLink="home" ><div class="fas fa-home fa-2x c1" style="margin-left: 50px;"></div></a>
+          </div>
+        </li>
+  
+        <li class="nav-item ">
+          <div class="dropdown">
+            <button type="button" class="c1 c2 dropdown-toggle" style="border:0px;width: 100%;padding: 10px;margin-left: 50px;" data-toggle="dropdown">
+             Categories
+            </button>
+            <div class="dropdown-menu" style="border: 0px;background-color: cyan;">
+              <a class="dropdown-item c1 c3"  routerLink='cars'>Cars</a>
+              <a class="dropdown-item c1 c3" routerLink='bikes'>Bikes</a>
+              <a class="dropdown-item c1 c3" routerLink='laptops'>Laptops</a>
+              <a class="dropdown-item c1 c3" routerLink='phones'>Phones</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item ">
+          <div class="form-group" style="padding-left: 100px;">
+            <input type="text" class="form-control" placeholder="search by product" style="width: 500px;" [(ngModel)]="searchItem">
+          </div>
+        </li>
+         
+  
+        <li>
+           
+          <a routerLink="register" (click)="userCheckRegister()" class="deco size" style="color:rgb(12, 243, 12) ;margin-left: 100px; ">Register</a>
+        </li>
+  
+        <li >        
+            
+          <a routerLink="login" (click)="userCheckLogin()" class="deco size" style="color:rgb(12, 243, 12) ;margin-left: 50px; ">Login</a>
+                
+        </li>
+  
+        
+        <li>
+          <div >
+            <a routerLink="cart" (click)="checkCart()"><div class="fas fa-heart fa-lg c1" style="margin-left: 50px;"></div></a>
+          </div>      
+          
+        </li>
+  
+       
+        <li>
+          
+    
+            <div >
+              <a routerLink="profile" (click)="checkProfile()"><div class="fas fa-user fa-lg c1 " style="margin-left: 50px;" ></div></a>
+               
+            </div>
+                   
+          
+        </li>    
+        
+    
+       
+    
+     
+      </ul>
+  
+    
+    </nav>
+    </div>
+<div class="container tab">
+  <nav class="navbar navbar-expand-sm bg-light navbar-light">
+    <ul class="navbar-nav">
+      <li class="nav-item ">
+        <div class="pad">
+          <a routerLink='cars' class="deco"><img src="https://stat.overdrive.in/wp-content/odgallery/2020/06/57263_2020_Mercedes_Benz_GLS.jpg" alt="cars" width="50px" height="50px">
+            <br>Cars
+          </a>
+          
+        </div>
+        
+      </li>
+
+      <li class="nav-item ">
+        <div class="pad">
+          <a routerLink='cars' class="deco"><img src="https://i.pinimg.com/originals/f8/09/d3/f809d3cc2511c345092561af6cb55cec.jpg" alt="cars" width="50px" height="50px">
+            <br>Bikes
+          </a>
+          
+        </div>
+        
+      </li>
+
+      <li class="nav-item ">
+        <div class="pad">
+          <a routerLink='cars' class="deco"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRt5OHsBukah1N9qP04_71_8r7hPS6ighFNA&usqp=CAU" alt="cars" width="50px" height="50px">
+            <br>Mobiles
+          </a>
+          
+        </div>
+        
+      </li>
+
+      <li class="nav-item ">
+        <div class="pad">
+          <a routerLink='cars' class="deco"><img src="https://cdn.mos.cms.futurecdn.net/A4GDK27VMnz6LtFDy9yzk.jpg" alt="cars" width="50px" height="50px">
+            <br>Laptops
+          </a>
+          
+        </div>
+        
+      </li>
+    </ul>
+  </nav>
+</div>
+    <div class="container"  style="margin-top: 30px;"> 
+      
+    <router-outlet></router-outlet>
+    <br>
+    <br>
+    
+    </div>
+    <footer style="background-color: darkmagenta;padding: 20px;">
+        <h4>Contact Us:</h4>
+       <p>Email:<a href="mailto:sureshchowhan13579@gmail.com">sureshchowhan13579@gmail.com</a></p> 
+        <i class="fab fa-instagram">Insta</i>
+        <br>
+        <i class="fab fa-facebook">Facebook</i>
+         
+    </footer>

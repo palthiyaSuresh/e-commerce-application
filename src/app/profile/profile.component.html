@@ -1,0 +1,41 @@
+
+
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="card" style="width:100%">
+         
+        <div  ><i class="fas fa-user-circle fa-4x"></i>Hello! {{userObj.userName}}</div>
+        <div class="card-body"> 
+          
+           
+                  <div>Your Gender:
+                    <p>{{userObj.gender}}</p>
+                  </div>
+                  <div>Your Location:
+                    <p>{{userObj.location}}</p>
+                  </div>
+                  <div>Your Email:
+                    <p>{{userObj.fname}}</p>
+                  </div>     
+                  <div> <a  routerLink="edit">Edit profile</a></div>
+                  <br>
+                  <div><button class="btn btn-primary" (click)="logOut()">Log Out</button></div>
+                  <br>                
+                  <div><a class="btn btn-primary" routerLink="add" >Add Products+ To Sell</a> </div>
+                  
+        </div>
+         
+        
+           
+         
+      </div>
+    </div>
+      
+    
+    <div class="col-sm-9">
+      <!-- <h3><b> Your Products</b></h3> -->
+      <router-outlet></router-outlet>
+  
+    </div>
+
+  </div>

@@ -1,0 +1,182 @@
+<h4>Fill the form to sell the product</h4>
+<form [formGroup]="addProduct" style="width: 300px; margin: 10px;" (submit)="insertProduct()">
+    <div class="form-group">
+        <label for="productImage">Image of the product:</label>
+    <input type="file"  formControlName="productImage" class="form-control" id="productImage" name="productImage" (change)="onChange($event)"  >
+    </div>
+    <div *ngIf="imageData">
+        <img [src]="imageData"  style="width:200px ;height:200px;"> 
+    </div>
+
+
+    <div class="form-group">
+        <label for="productType"> Product Type:</label>
+    <!-- <input type="text" formControlName="productType" class="form-control" id="productType" name="productType" placeholder="enter product type"> -->
+    <select id="productType" name="productType" formControlName="productType" class="form-control"  >         
+        <option  >---please choose an option---</option>
+        <option typeValue="cars">cars</option>            
+      <option typeValue="bikes">bikes</option>            
+         
+      </select>
+    </div>
+
+   
+    
+
+    
+    <div  class="form-group">
+        <label for="productBrand"> Product Brand:</label>
+    <!-- <input type="text" formControlName="productBrand" class="form-control" id="productBrand" name="productBrand" placeholder="enter product brand"> -->
+    <div *ngIf="addProduct.value.productType=='cars'">
+        <select id="productBrand" name="productBrand" formControlName="productBrand" class="form-control"   >
+            <option disabled style="color: red;background-color: black;"><b>CARS</b></option>
+            <!-- <option disabled style="color: red;background-color: black;"><b>Cars</b></option> -->
+          <option brandValue="bmw">bmw</option>
+          <option brandValue="ford">ford</option>
+          <option brandValue="maruthiSuzuki">maruthiSuzuki</option>
+        </select>
+           
+    </div>
+    <div *ngIf="addProduct.value.productType=='bikes'">
+        <select id="productBrand" name="productBrand" formControlName="productBrand" class="form-control"   >
+            <option disabled style="color: red;background-color: black;"><b>BIKES</b></option>
+             
+          <!-- <option disabled style="color: red;background-color: black;"><b>Bikes</b></option>  -->
+          <option brandValue="ktm">ktm</option> 
+          <option brandValue="pulsar">pulsar</option>
+          <option brandValue="royalEnfield">royalEnfield</option> 
+        </select>
+    </div>
+    
+    <div *ngIf="addProduct.value.productType==undefined">
+        <p style="color: red;">----please enter product Type----</p>
+    </div>
+
+       
+     
+    </div>
+
+
+        
+    
+
+
+
+
+
+     
+        <div class="form-group">
+            <label for="productSeries">  Product Series: </label>
+        <!-- <input type="text" formControlName="productBrand" class="form-control" id="productBrand" name="productBrand" placeholder="enter product brand"> -->
+        <div *ngIf="addProduct.value.productBrand=='bmw'">
+                <select id="productSeries" name="productSeries" formControlName="productSeries" class="form-control"  >            
+                 
+                          
+                <option disabled style="color: rgb(255, 255, 255);background-color: lightslategray;"><b>    BMW</b></option>
+                <option seriesValue="x1">x1</option>
+                <option seriesValue="z4Roadster">z4Roadster</option>
+                <option seriesValue="x7">x7</option>
+            </select>
+            </div>           
+         
+
+          <div *ngIf="addProduct.value.productBrand=='ford'">
+            <select id="productSeries" name="productSeries" formControlName="productSeries" class="form-control"  > 
+            <option disabled style="color: lightgreen;background-color: lightslategray;"><b>    FORD</b></option>
+            <option seriesValue="ecosport">ecosport</option>
+            <option seriesValue="endeavour">endeavour</option>
+            <option seriesValue="mustangFacelift">mustangFacelift</option>
+        </select>
+          </div>
+          
+          <div *ngIf="addProduct.value.productBrand=='maruthiSuzuki'">
+            <select id="productSeries" name="productSeries" formControlName="productSeries" class="form-control"  > 
+            <option disabled style="color: lightgreen;background-color: lightslategray;"><b>    MARUTHI SUZUKI</b></option>
+            <option seriesValue="sCross">sCross</option>
+            <option seriesValue="swift">swift</option>
+            <option seriesValue="xl6">xl6</option>
+        </select>
+          </div>
+
+
+          
+          <div *ngIf="addProduct.value.productBrand=='ktm'"> 
+            <select id="productSeries" name="productSeries" formControlName="productSeries" class="form-control"  >           
+          <option disabled style="color: lightgreen;background-color: lightslategray;"><b>    KTM</b></option>
+          <option seriesValue="rc200">rc200</option>
+          <option seriesValue="125duke">125duke</option>
+          <option seriesValue="200duke">200duke</option>
+        </select>
+          </div>
+
+
+          <div *ngIf="addProduct.value.productBrand=='pulsar'">
+            <select id="productSeries" name="productSeries" formControlName="productSeries" class="form-control"  > 
+          <option disabled style="color: lightgreen;background-color: lightslategray;"><b>    PULSAR</b></option>
+          <option seriesValue="pulsar150">pulsar150</option>
+          <option seriesValue="rs200">rs200</option>
+          <option seriesValue="ns200">ns200</option>
+        </select>
+          </div>
+
+          <div *ngIf="addProduct.value.productBrand=='royalEnfield'">
+            <select id="productSeries" name="productSeries" formControlName="productSeries" class="form-control"  > 
+          <option disabled style="color: lightgreen;background-color: lightslategray;"><b>    ROYAL ENFIELD</b></option>
+          <option seriesValue="classic350">classic350</option>
+          <option seriesValue="interceptor650">interceptor650</option>
+          <option seriesValue="meteor350">meteor350</option>
+        </select>
+          </div>
+
+
+          <div *ngIf="addProduct.value.productBrand==undefined">
+              <p style="color: red;">----please enter product Brand----</p>
+          </div>
+          
+
+          
+           
+           
+           
+          
+        </div>
+
+    
+
+
+
+
+
+
+    <!-- <div class="form-group">
+        <label for="productSeries"> Product Series</label>
+    <input type="text" formControlName="productSeries" class="form-control" id="productSeries" name="productSeries" placeholder="enter product brand">
+    </div> -->
+
+    
+    <div class="form-group">
+      <label for="price">Price:</label>
+      <input type="text" formControlName="price" class="form-control" id="price" name="price" placeholder="enter the price" >  
+  </div>
+
+
+    <div class="form-group">
+        <label for="year">year of buying the product</label>
+        <input type="date" formControlName="year" class="form-control" id="year" name="year" placeholder="enter the year of buying the product" >  
+    </div>
+
+    
+    <!-- <div class="form-group">
+        <label for="waranty">Waranty months</label>
+        <input type="number" formControlName="waranty" class="form-control" id="waranty" name="waranty" placeholder="enter waranty months">
+         
+        
+    </div> -->
+     
+    <div class="form-group">
+         <button type="submit" class="btn btn-danger" > Add</button>
+    </div>
+
+    
+</form>
+ 

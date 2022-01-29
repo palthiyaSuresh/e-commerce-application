@@ -1,0 +1,36 @@
+   
+ 
+     <div class="container">
+        <div class="col-6">
+          <img [src]=productObj.imageUrl alt="your Photo" class="card-image-top " style="width: 300px;height:300px;">
+      
+     
+          <div class="card-body">
+            <ul>
+              <li>Price:{{productObj.price}}</li>
+              <br>
+              <li >Brand:{{productObj.productBrand }}</li>
+              <br>
+              <li>Model:{{productObj.productSeries}}</li>
+              <br>
+              <li>fname: <a>{{productObj.fname}}</a></li>
+               
+            </ul>             
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-primary" (click)="addCart()">Add to cart</button>
+          <button class="btn btn-primary" style="float: right;" >Buy product</button>
+       </div>
+       
+      
+      </div>
+      <div class="col-6">
+        <h3>Product Owner details</h3>
+        <p>name:{{productUser.userName}}</p>
+        <p>mobile:{{productUser.number}}</p>
+        <p>gender:{{productUser.gender}}</p>
+        <p>location:{{productUser.location}}</p>
+      </div>
+  
+  
+       </div>

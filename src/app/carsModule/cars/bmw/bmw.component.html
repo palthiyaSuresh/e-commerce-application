@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-sm bg-light navbar-light">    
+    <ul class="navbar-nav"> 
+      <li class="nav-item ">
+        <div class="dropdown">
+          <button type="button" class="dropdown-toggle" style="border:0px;width: 100%;margin-left: 20px;" data-toggle="dropdown">
+           Filter
+          </button>
+          <div class="dropdown-menu" style="border: 0px;background-color: cyan;padding: 20px;width: 200px;">
+            <label style="margin-top: 10px;">PRICE</label><br>
+                      <input type="text"  style="width: 40px;display:inline; font-size: 15px;" placeholder="Min" [(ngModel)]="minVal" >
+                      <p style="display: inline;margin-left:14px;">to</p>
+                      <input type="text"  style="width: 40px; margin-left: 20px;font-size:15px;" placeholder="Max" [(ngModel)]="maxVal">
+                      <label style="margin-top: 10px;">Waranty</label> 
+                      <br>                                          
+           
+                      <form>
+                        <select id="months" name="waranty">
+                          <option value="0" >months</option>
+                        <option value="3">3 months</option>
+                        <option value="6">6 months</option>
+                        <option value="9">9 months</option>
+                        <option value="12">12 months</option>
+                         
+                        </select>
+                      </form>
+  
+              
+          </div>
+        </div>
+      </li>    
+      <li style="margin-left:50px">
+         <a routerLink="bmwx1" class="deco" routerLinkActive="c c1 c2" >BMW X1</a>
+      </li>
+      <li style="margin-left:20px">
+        <a routerLink="bmwz4" class="deco" routerLinkActive="c c1 c2">BMW Z4 ROADSTER</a>      
+      </li>   
+      <li style="margin-left:20px">
+        <a routerLink="bmwx7" class="deco" routerLinkActive="c c1 c2"> BMW X7 </a>
+       </li>
+    </ul>
+  
+  </nav> 
+    
+     
+       
+      <router-outlet></router-outlet>

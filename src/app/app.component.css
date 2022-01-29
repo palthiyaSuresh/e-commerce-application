@@ -1,0 +1,22 @@
+.c1:active{
+    color: green;
+}
+.brand{
+    color: deepskyblue;
+    font-size:larger;
+    font-family: 'Times New Roman', Times, serif;
+}
+.tab{
+    padding-left: 10px;
+}
+.deco{
+    text-decoration: none;
+     
+}
+.pad{
+    padding-left: 20px;
+
+}
+.size{
+    font-size:20px;
+}

@@ -1,0 +1,51 @@
+<h4>Enter Your Details</h4>
+<form [formGroup]="editForm" style="width: 300px; margin: 10px;">
+    <!-- <div class="form-group">
+    <p>Gender</p>
+    <input type="radio" formControlName="gender" class="form-control" id="male" name="male">
+    <label for="male">male</label>
+    <input type="radio" formControlName="gender" class="form-control" id="female" name="female">
+    <label for="female">female</label>
+    </div> -->
+    <div class="radio-inline form-group">
+        <!-- <input id="gender" type="radio" name="genderControl" formControlName="genderControl" />
+        <label class="radio-label"> Male</label>
+        <input id="gender" type="radio" name="genderControl" formControlName="genderControl" />
+        <label class="radio-label">Female</label> -->
+        <p>Gender:</p>
+            <label>
+              <input type="radio" value="Male" formControlName="gender">
+                <span>male</span>
+            </label>
+            &nbsp;
+            <label>
+              <input type="radio" value="Female" formControlName="gender">
+                <span>female</span>
+            </label>
+      
+      </div>
+    <!-- <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" formControlName="email" class="form-control" id="email" name="email" placeholder="enter mail">
+    </div> -->
+    <div class="form-group">
+      <label for="location">   choose Your Location: </label>
+      <select id="location" name="location" formControlName="location" class="form-control"  > 
+      <option value="warangal" >warangal</option>
+      <option value="karimnagar">karimnagar</option>
+      <option value="nizamabad">nizamabad</option>
+      <option value="mahabubabad">mahabubabad</option>
+      <option value="khammam">khammam</option>
+       
+      </select>
+    </div>
+    <div class="form-group">
+        <label for="number">Mobile Number</label>
+        <input type="text" formControlName="number" class="form-control" id="number" name="number" placeholder="enter mobile number">
+    </div>
+    <div class="form-group">
+         <a type="button" class="btn btn-danger" (click)="save()"  >save</a>
+    </div>
+
+    
+</form>
